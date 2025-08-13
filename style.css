@@ -1,38 +1,47 @@
+/* RESET & BASE */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, sans-serif;
     color: #333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
 }
 
+/* HEADER */
 header {
+    background-color: #1a1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    padding: 12px 30px;
 }
 
 header .logo img {
-    height: 40px;
+    height: 35px;
+    filter: brightness(0) invert(1);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 18px;
     margin: 0;
     padding: 0;
 }
 
 nav a {
+    color: #eee;
     text-decoration: none;
-    color: #333;
     font-weight: 500;
 }
 
+nav a:hover {
+    color: #ff4d4d;
+}
+
+/* HERO SECTION */
 .hero {
-    background: url('https://global.canon/en/img/main/main01.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, #ff4d4d, #660000);
     color: white;
     padding: 80px 20px;
     text-align: center;
@@ -41,56 +50,76 @@ nav a {
 .hero-content {
     max-width: 700px;
     margin: auto;
-    background-color: rgba(0,0,0,0.5);
-    padding: 30px;
-    border-radius: 10px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 15px 25px;
-    background-color: #d70000;
-    color: white;
-    text-decoration: none;
+    padding: 14px 28px;
+    background-color: white;
+    color: #660000;
+    border-radius: 30px;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #a50000;
+    background-color: #ffcccc;
+    color: #330000;
 }
 
+/* MAIN CONTENT */
 main {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
-    line-height: 1.6;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 h2 {
-    color: #d70000;
+    color: #660000;
     margin-top: 30px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-    font-size: 0.9rem;
-    color: #777;
+h3 {
+    color: #cc0000;
 }
 
+a {
+    color: #cc0000;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer nav a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    color: #ff4d4d;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -99,7 +128,7 @@ footer {
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .hero p {
